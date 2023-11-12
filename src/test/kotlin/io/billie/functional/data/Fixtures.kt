@@ -1,12 +1,8 @@
 package io.billie.functional.data
 
-import io.billie.orders.domain.InvoiceDetails
-import io.billie.orders.domain.MerchantId
-import io.billie.orders.domain.Order
-import io.billie.orders.domain.OrderId
+import io.billie.orders.domain.*
 import java.text.SimpleDateFormat
 import java.util.*
-import kotlin.collections.HashMap
 
 object Fixtures {
 
@@ -151,9 +147,11 @@ object Fixtures {
         return data
     }
 
-    fun createOrder() = Order(OrderId(UUID.randomUUID()), MerchantId(UUID.randomUUID()), 1000, createInvoiceDetails())
+    fun createOrder(amount: Int) =
+        Order(OrderId(UUID.randomUUID()), MerchantId(UUID.randomUUID()), amount, createInvoiceDetails())
+
+    fun createShipment(orderId: OrderId, amount: Int) = Shipment(ShipmentId(UUID.randomUUID()), orderId, amount)
 
     fun createInvoiceDetails() = InvoiceDetails("buyer name", "buyer IBAN")
-
 
 }

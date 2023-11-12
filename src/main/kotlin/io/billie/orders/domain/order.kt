@@ -16,13 +16,14 @@ class Order(
     val invoiceDetails: InvoiceDetails,
     shipments: List<Shipment> = emptyList()
 ) {
+
     private var shipments = shipments
-        get() = shipments
+
     val openAmount: Int
         get() = amount - shipments.sumOf { it.amount }
 
     val status: OrderStatus
-        get() = if (openAmount < amount) OrderStatus.Open else OrderStatus.Closed
+        get() = if (openAmount > 0) OrderStatus.Open else OrderStatus.Closed
 
     fun addShipment(shipment: Shipment) {
         if (status == OrderStatus.Closed) {
@@ -31,7 +32,7 @@ class Order(
 
         if (shipments.any { it.id == shipment.id }) return
 
-        if (openAmount + shipment.amount > amount) {
+        if (openAmount - shipment.amount < 0) {
             throw ShipmentException("Shipment amount exceeds open order amount")
         }
 

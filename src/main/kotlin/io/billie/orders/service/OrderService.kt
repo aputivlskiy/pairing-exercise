@@ -4,8 +4,10 @@ import io.billie.orders.data.OrderRepository
 import io.billie.orders.domain.*
 import io.billie.orders.gateways.InvoiceGateway
 import io.billie.orders.gateways.PaymentGateway
+import org.springframework.stereotype.Service
 import org.springframework.transaction.annotation.Transactional
 
+@Service
 class OrderService(
     private val repository: OrderRepository,
     val paymentGateway: PaymentGateway,
