@@ -50,3 +50,16 @@ docs at -> http://localhost:8080/swagger-ui/index.html
 Work has been started but not done yet to containerise the kotlin service.
 
 The service runs in the host right now.  Feel free to fix that if it makes your life easier
+
+### Discussion
+## Analysis
+<img width="966" alt="image" src="https://github.com/aputivlskiy/pairing-exercise/assets/6245715/7f7f3c98-575f-4b07-836b-cd8a563279e6">
+
+
+## System context
+<img width="966" alt="image" src="https://github.com/aputivlskiy/pairing-exercise/assets/6245715/b634f18f-55f9-48f3-ab36-5c9273d1fb1d">
+
+
+
+
+
