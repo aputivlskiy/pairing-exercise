@@ -69,5 +69,5 @@ The service runs in the host right now.  Feel free to fix that if it makes your 
 <img width="966" alt="image" src="https://github.com/aputivlskiy/pairing-exercise/assets/6245715/7f7f3c98-575f-4b07-836b-cd8a563279e6">
 
 ### System context
-<img width="965" alt="image" src="https://github.com/aputivlskiy/pairing-exercise/assets/6245715/3afcafa0-3eea-4e49-92e9-a287344c771f">
+<img width="947" alt="image" src="https://github.com/aputivlskiy/pairing-exercise/assets/6245715/28742b19-35a6-4640-bc92-3b8424398813">
 
